@@ -1,9 +1,15 @@
 const noBtn = document.getElementById('noBtn');
-noBtn.addEventListener('mouseover', () => {
-  const x = (Math.random() - 0.5) * 220;
-  const y = (Math.random() - 0.5) * 60;
+
+function escaparNoBtn(e){
+  e.preventDefault();
+  const x = (Math.random() - 0.5) * 160;
+  const y = 40 + Math.random() * 30; // siempre hacia abajo, lejos del botón Sí
   noBtn.style.transform = `translate(${x}px, ${y}px)`;
-});
+}
+
+noBtn.addEventListener('mouseover', escaparNoBtn);
+noBtn.addEventListener('touchstart', escaparNoBtn, { passive: false });
+
 noBtn.addEventListener('click', (e) => {
   e.preventDefault();
   noBtn.innerText = 'No puedes decir que no 🥹💗';

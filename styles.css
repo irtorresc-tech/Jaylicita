@@ -121,6 +121,8 @@ button{
   background: var(--pink-deep);
   color:white;
   box-shadow: 0 8px 20px rgba(255,143,179,0.5);
+  position:relative;
+  z-index:5;
 }
 #yesBtn:hover{ transform: scale(1.08); }
 
@@ -128,6 +130,7 @@ button{
   background: var(--lavender);
   color: var(--plum);
   position:relative;
+  z-index:1;
 }
 
 .hidden{ display:none; }
