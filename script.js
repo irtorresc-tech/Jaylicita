@@ -1,4 +1,3 @@
-// El botón "No" se escapa del cursor, es solo un jueguito tierno
 const noBtn = document.getElementById('noBtn');
 noBtn.addEventListener('mouseover', () => {
   const x = (Math.random() - 0.5) * 220;
@@ -7,7 +6,6 @@ noBtn.addEventListener('mouseover', () => {
 });
 noBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  // si logra hacer click, igual la respuesta es dulce
   noBtn.innerText = 'No puedes decir que no 🥹💗';
 });
 
