@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para ti, Jayli 💌</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- emojis flotando en el fondo -->
+<div class="float-emoji" style="top:8%; left:6%; animation-delay:0s;">☕</div>
+<div class="float-emoji" style="top:15%; right:8%; animation-delay:1.2s;">💕</div>
+<div class="float-emoji" style="bottom:12%; left:10%; animation-delay:2s;">🍪</div>
+<div class="float-emoji" style="bottom:20%; right:12%; animation-delay:0.6s;">🥐</div>
+<div class="float-emoji" style="top:45%; left:4%; animation-delay:1.8s;">✨</div>
+
+<div class="card">
+
+  <!-- PASO 1: la pregunta -->
+  <div id="step1">
+    <div class="bear-hero">🧸</div>
+    <div class="eyebrow">Para mi amorcito</div>
+    <h1>Jayli 💗</h1>
+    <div class="photo-frame" id="photoFrame">
+      <img src="foto-rana.png" alt="Foto especial" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+    </div>
+    <p class="msg">
+      Amorcito, quiero robarte un ratito este viernes para tomar algo rico juntos
+      <br><br>
+      ¿Quieres salir conmigo?
+    </p>
+    <div class="buttons">
+      <button id="yesBtn" onclick="showCafes()">¡Sí! 🥰</button>
+      <button id="noBtn">No 🥹</button>
+    </div>
+  </div>
+
+  <!-- PASO 2: elegir cafetería -->
+  <div id="step2" class="hidden">
+    <div class="eyebrow">¡Sabía que dirías que sí! 🎉</div>
+    <h1>Elige el lugar</h1>
+    <p class="msg">¿A cuál de estas dos antojamos este viernes?</p>
+    <div class="cafe-options">
+      <div class="cafe-card" onclick="chooseCafe('Dulce y Seda', '🍪')">
+        <span class="emoji">🍪</span>
+        <h3>Dulce y Seda</h3>
+        <p>Galletitas ricas</p>
+      </div>
+      <div class="cafe-card" onclick="chooseCafe('Miga', '🥖')">
+        <span class="emoji">🥖☕</span>
+        <h3>Miga</h3>
+        <p>Pan y café</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PASO 3: confirmación -->
+  <div id="step3" class="hidden">
+    <div class="eyebrow">Cita confirmada 🎊</div>
+    <h1>¡Nos vemos! <span id="cafeEmoji"></span></h1>
+    <div class="confirm-box">
+      <h2>Detalles de nuestra cita</h2>
+      <div class="detail">📅 <strong>Viernes</strong></div>
+      <div class="detail">🕑 <strong>2:00 PM</strong></div>
+      <div class="detail">📍 <strong id="cafeName"></strong></div>
+      <div class="detail">💌 Ya reserva ese ratito para mí, amorcito 💗</div>
+    </div>
+    <p class="msg">Gracias por decir que sí, amorcito. Te quiero muchísimo 💕</p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

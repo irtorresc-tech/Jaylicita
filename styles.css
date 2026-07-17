@@ -1,0 +1,185 @@
+:root{
+  --pink: #FFD6E8;
+  --pink-deep: #FF8FB3;
+  --lavender: #D9CBFF;
+  --mint: #BEF2E4;
+  --yellow: #FFE58A;
+  --plum: #4A2551;
+  --white: #FFFDFB;
+}
+
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  min-height:100vh;
+  background: linear-gradient(160deg, var(--pink) 0%, var(--lavender) 55%, var(--mint) 100%);
+  font-family:'Quicksand', sans-serif;
+  color:var(--plum);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  overflow-x:hidden;
+  position:relative;
+}
+
+.float-emoji{
+  position:fixed;
+  font-size:28px;
+  opacity:0.75;
+  animation: floaty 7s ease-in-out infinite;
+  pointer-events:none;
+  z-index:0;
+}
+@keyframes floaty{
+  0%,100%{ transform: translateY(0) rotate(0deg); }
+  50%{ transform: translateY(-30px) rotate(8deg); }
+}
+
+.card{
+  position:relative;
+  z-index:1;
+  background:var(--white);
+  border-radius:32px;
+  max-width:480px;
+  width:100%;
+  padding:40px 32px;
+  text-align:center;
+  box-shadow: 0 20px 50px rgba(74,37,81,0.18);
+  border: 3px solid var(--pink-deep);
+}
+
+.bear-hero{
+  font-size:5rem;
+  line-height:1;
+  margin-bottom:6px;
+  animation: bearBounce 2.4s ease-in-out infinite;
+  filter: drop-shadow(0 10px 14px rgba(255,143,179,0.35));
+}
+@keyframes bearBounce{
+  0%,100%{ transform: translateY(0) rotate(-3deg); }
+  50%{ transform: translateY(-14px) rotate(3deg); }
+}
+
+h1{
+  font-family:'Fredoka', sans-serif;
+  font-size:2rem;
+  margin:0 0 8px;
+  color:var(--pink-deep);
+}
+
+.eyebrow{
+  font-family:'Fredoka', sans-serif;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-size:0.75rem;
+  color:var(--plum);
+  opacity:0.6;
+  margin-bottom:6px;
+}
+
+p.msg{
+  font-size:1.05rem;
+  line-height:1.55;
+  margin: 16px 0 28px;
+}
+
+.photo-frame{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, var(--pink), var(--yellow));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:3rem;
+  border: 4px solid var(--pink-deep);
+  overflow:hidden;
+}
+
+.buttons{
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  position:relative;
+  height:60px;
+}
+
+button{
+  font-family:'Fredoka', sans-serif;
+  font-size:1.05rem;
+  border:none;
+  border-radius:999px;
+  padding:14px 28px;
+  cursor:pointer;
+  transition: transform 0.2s ease;
+}
+
+#yesBtn{
+  background: var(--pink-deep);
+  color:white;
+  box-shadow: 0 8px 20px rgba(255,143,179,0.5);
+}
+#yesBtn:hover{ transform: scale(1.08); }
+
+#noBtn{
+  background: var(--lavender);
+  color: var(--plum);
+  position:relative;
+}
+
+.hidden{ display:none; }
+
+.cafe-options{
+  display:flex;
+  gap:14px;
+  margin-top:10px;
+}
+
+.cafe-card{
+  flex:1;
+  background: var(--white);
+  border: 2px solid var(--pink);
+  border-radius:20px;
+  padding:18px 12px;
+  cursor:pointer;
+  transition: all 0.25s ease;
+}
+.cafe-card:hover{
+  border-color:var(--pink-deep);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(255,143,179,0.3);
+}
+.cafe-card .emoji{ font-size:2.2rem; display:block; margin-bottom:6px;}
+.cafe-card h3{ font-family:'Fredoka',sans-serif; margin:4px 0; color:var(--pink-deep); font-size:1.1rem;}
+.cafe-card p{ margin:0; font-size:0.85rem; opacity:0.75; }
+
+.confirm-box{
+  background: linear-gradient(135deg, var(--yellow), var(--pink));
+  border-radius:20px;
+  padding:22px;
+  margin-top:20px;
+}
+.confirm-box h2{
+  font-family:'Fredoka',sans-serif;
+  margin:0 0 10px;
+  color:var(--plum);
+  font-size:1.3rem;
+}
+.confirm-box .detail{
+  font-size:1rem;
+  margin:6px 0;
+}
+
+.confetti{
+  position:fixed;
+  top:-20px;
+  font-size:22px;
+  animation: fall linear forwards;
+  z-index:2;
+}
+@keyframes fall{
+  to{ transform: translateY(110vh) rotate(360deg); opacity:0.9; }
+}
